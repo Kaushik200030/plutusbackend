@@ -1,6 +1,6 @@
 The following documentation outlines the API endpoints based on requirements of project.
 
-##[Deployed Version](kaushikpattnaik200030.pythonanywhere.com/admin)
+##[Deployed Version](http://kaushikpattnaik200030.pythonanywhere.com/admin)
 - `username`: "admin"
 - `password`: "admin123"
 
