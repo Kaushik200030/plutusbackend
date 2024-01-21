@@ -58,13 +58,15 @@ curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/
 
 **Authorization Required:** No
 
-# Login
+### Login
+```bash
 curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{
    "username": "username",
    "password": "password"
 }'
+```
 
 ---
 
@@ -82,8 +84,10 @@ curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/
 
 **Authorization Required:** No
 
-# Fetch Posts (General)
+### Fetch Posts (General)
+```bash
 curl --location --request GET 'http://kaushikpattnaik200030.pythonanywhere.com/api/posts/'
+```
 
 ---
 
@@ -101,8 +105,10 @@ curl --location --request GET 'http://kaushikpattnaik200030.pythonanywhere.com/a
 
 **Authorization Required:** No
 
-# Fetch Posts by User
+### Fetch Posts by User
+```bash
 curl --location --request GET 'http://kaushikpattnaik200030.pythonanywhere.com/api/posts/?user=<user_id>'
+```
 
 ---
 
@@ -126,7 +132,8 @@ curl --location --request GET 'http://kaushikpattnaik200030.pythonanywhere.com/a
 
 **Authorization Required:** Yes - A valid token must be provided in the `Authorization` header.
 
-# Create Comment
+### Create Comment
+```bash
 curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/comments/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <your_token>' \
@@ -134,6 +141,7 @@ curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/
   "post": "<your_post_id>",
   "body": "<your_comment_body>"
 }'
+```
 
 ---
 
@@ -156,13 +164,15 @@ curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/
 
 **Authorization Required:** Yes - A valid token must be provided in the `Authorization` header.
 
-# Like a Post
+### Like a Post
+```bash
 curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/likes/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <your_token>' \
 --data-raw '{
   "post": "<your_post_id>"
 }'
+```
 
 ---
 
@@ -186,6 +196,8 @@ curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/
 
 **Authorization Required:** Yes - A valid token must be provided in the `Authorization` header.
 
+### Create Post
+```bash
 curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/posts/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <your_token>' \
@@ -193,6 +205,7 @@ curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/
   "title": "<your_post_title>",
   "body": "<your_post_body>"
 }'
+```
 
 ---
 
