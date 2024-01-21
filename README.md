@@ -27,6 +27,7 @@ The following documentation outlines the API endpoints based on requirements of 
 **Authorization Required:** No
 
 # Sign Up (Registration)
+```bash
 curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/signup' \
 --header 'Content-Type: application/json' \
 --data-raw '{
