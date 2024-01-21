@@ -4,7 +4,6 @@ The following documentation outlines the API endpoints based on requirements of 
 - `username`: "admin"
 - `password`: "admin123"
 
-
 ---
 
 ### **1. Sign Up (Registration) API**
@@ -27,6 +26,15 @@ The following documentation outlines the API endpoints based on requirements of 
 
 **Authorization Required:** No
 
+# Sign Up (Registration)
+curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/signup' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "username",
+    "email": "email@abc.com",
+    "password": "password"
+}'
+
 ---
 
 ### **2. Login API**
@@ -48,6 +56,14 @@ The following documentation outlines the API endpoints based on requirements of 
 
 **Authorization Required:** No
 
+# Login
+curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+   "username": "username",
+   "password": "password"
+}'
+
 ---
 
 ### **3. Fetch Posts API (General)**
@@ -64,6 +80,9 @@ The following documentation outlines the API endpoints based on requirements of 
 
 **Authorization Required:** No
 
+# Fetch Posts (General)
+curl --location --request GET 'http://kaushikpattnaik200030.pythonanywhere.com/api/posts/'
+
 ---
 
 ### **4. Fetch Posts by User API**
@@ -79,6 +98,9 @@ The following documentation outlines the API endpoints based on requirements of 
 **Body Data Parameters:** None - The endpoint appears to use a query parameter `user` to filter posts by the user ID.
 
 **Authorization Required:** No
+
+# Fetch Posts by User
+curl --location --request GET 'http://kaushikpattnaik200030.pythonanywhere.com/api/posts/?user=<user_id>'
 
 ---
 
@@ -102,6 +124,15 @@ The following documentation outlines the API endpoints based on requirements of 
 
 **Authorization Required:** Yes - A valid token must be provided in the `Authorization` header.
 
+# Create Comment
+curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/comments/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <your_token>' \
+--data-raw '{
+  "post": "<your_post_id>",
+  "body": "<your_comment_body>"
+}'
+
 ---
 
 ### **6. Like a Post API**
@@ -122,6 +153,14 @@ The following documentation outlines the API endpoints based on requirements of 
 - `post` - The ID of the post to like.
 
 **Authorization Required:** Yes - A valid token must be provided in the `Authorization` header.
+
+# Like a Post
+curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/likes/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <your_token>' \
+--data-raw '{
+  "post": "<your_post_id>"
+}'
 
 ---
 
@@ -144,6 +183,14 @@ The following documentation outlines the API endpoints based on requirements of 
 - `body` - The content of the post.
 
 **Authorization Required:** Yes - A valid token must be provided in the `Authorization` header.
+
+curl --location --request POST 'http://kaushikpattnaik200030.pythonanywhere.com/api/posts/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <your_token>' \
+--data-raw '{
+  "title": "<your_post_title>",
+  "body": "<your_post_body>"
+}'
 
 ---
 
