@@ -1,8 +1,13 @@
 The following documentation outlines the API endpoints based on requirements of project.
 
-[Deployed Version](http://kaushikpattnaik200030.pythonanywhere.com/admin)
+## Admin UI
+[Deployed Version Backend](http://kaushikpattnaik200030.pythonanywhere.com/admin)
 - `username`: "admin"
 - `password`: "admin123"
+
+## Frontend
+[Deployed Version Frontend](https://eloquent-lebkuchen-275dc5.netlify.app/posts)
+- `repository`: [Link](https://github.com/Kaushik200030/frontend)
 
 ---
 
