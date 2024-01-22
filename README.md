@@ -8,6 +8,8 @@ The following documentation outlines the API endpoints based on requirements of 
 ## Frontend
 [Deployed Version Frontend](https://eloquent-lebkuchen-275dc5.netlify.app/posts)
 - `repository`: [Link](https://github.com/Kaushik200030/frontend)
+- Use same credentials as above to login
+- Scroll down on home page to register
 
 ---
 
